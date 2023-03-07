@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@directus/sdk": "^10.1.4",
+    "@hcaptcha/react-hcaptcha": "^1.4.4",
     "ahooks": "^3.7.4",
     "axios": "^0.27.2",
     "lamejsfix": "1.0.1",
@@ -27,6 +28,7 @@
     "react-audio-voice-recorder": "^1.0.4",
     "react-dom": "18.1.0",
     "react-google-recaptcha": "^2.1.0",
+    "react-google-recaptcha-v3": "^1.10.1",
     "react-phone-number-input": "^3.2.19",
     "swiper": "^8.3.2"
   },

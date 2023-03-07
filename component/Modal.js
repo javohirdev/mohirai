@@ -4,6 +4,8 @@ import PartnersApi from "../pages/mockDatas/partnersapi/static.json";
 import { useRouter } from "next/router";
 import Input from "react-phone-number-input/input";
 import ReCAPTCHA from "react-google-recaptcha";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function Modal({ setModal }) {
 
@@ -22,11 +24,11 @@ export default function Modal({ setModal }) {
       setBtnStyle(false)
     }
   }
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    if (name !== "" && number !=='') {
+
+    if (name !== "" && number !== '') {
 
       fetch("https://admin.uzbekvoice.ai/items/waitlist_form", {
         method: "POST",
@@ -51,6 +53,12 @@ export default function Modal({ setModal }) {
         setModal(false)
       }, 4000);
     }
+  };
+
+  const [token, setToken] = useState(null);
+
+  const handleTokenChange = (token) => {
+    setToken(token);
   };
 
   return (
@@ -93,8 +101,10 @@ export default function Modal({ setModal }) {
                     </div>
 
                     <div>
-                      <ReCAPTCHA
-                        sitekey="6LcEwt0kAAAAAJjGfn6we02p5RYNBLn10o8UsRn2"
+                      <ReCAPTCHA sitekey={`6LdNod0kAAAAAK232SzA4L9AftUhMM0SnFccF_a2`} onChange={handleTokenChange} />
+
+                      <HCaptcha
+                        sitekey={`9a098deb-3095-4202-97c0-347d8a1b43e2`}
                       />
                     </div>
 
