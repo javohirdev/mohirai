@@ -23,10 +23,20 @@ export default function Modal({ setModal }) {
     }
   }
 
+  const [hCaptchaResponse, setHCaptchaResponse] = useState('');
+
+  function handleHCaptchaVerify(responseToken) {
+    setHCaptchaResponse(responseToken);
+  }
+
+  function isHCaptchaChecked() {
+    return hCaptchaResponse !== '';
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name !== "" && number !== '') {
+    if (name !== "" && number !== '' && !isHCaptchaChecked()) {
 
       fetch("https://admin.uzbekvoice.ai/items/waitlist_form", {
         method: "POST",
@@ -50,26 +60,14 @@ export default function Modal({ setModal }) {
       setTimeout(() => {
         setModal(false)
       }, 4000);
+
+      // if (!isHCaptchaChecked()) {
+      //   alert('Please complete the hCaptcha challenge.');
+      //   setBtnStyle(false)
+      //   return;
+      // }
     }
   };
-
-  const [token, setToken] = useState(null);
-  const captchaRef = useRef(null);
-
-  const onLoad = () => {
-    // this reaches out to the hCaptcha JS API and runs the
-    // execute function on it. you can use other functions as
-    // documented here:
-    // https://docs.hcaptcha.com/configuration#jsapi
-    captchaRef.current.execute();
-  };
-
-  useEffect(() => {
-
-    if (token)
-      console.log(`hCaptcha Token: ${token}`);
-
-  }, [token]);
 
 
   return (
@@ -114,13 +112,16 @@ export default function Modal({ setModal }) {
                     <div>
                       <HCaptcha
                         sitekey={`9a098deb-3095-4202-97c0-347d8a1b43e2`}
-                        onLoad={onLoad}
-                        onVerify={setToken}
-                        ref={captchaRef}
+                        onVerify={handleHCaptchaVerify}
                       />
+                      {isHCaptchaChecked() ? (
+                        <div>Captcha checked!</div>
+                      ) : (
+                        <div>Captcha not checked yet.</div>
+                      )}
                     </div>
 
-                    <button className={btnStyle ? styles.activeBtn : ''} type="submit">{value.button}</button>
+                    <button className={btnStyle ? styles.activeBtn : ''} disabled={!isHCaptchaChecked()} type="submit">{value.button}</button>
                   </form>
               }
             </div>
