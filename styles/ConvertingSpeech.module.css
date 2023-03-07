@@ -1,0 +1,215 @@
+.ConvertingSpeech {
+    margin-top: 19px;
+}
+
+.ConvertingSpeech .title {
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.title p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    width: 400px;
+    margin-top: 10px;
+}
+
+.ConvertingSpeech h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    position: relative;
+    color: #fff;
+    width: 467px;
+    margin-right: 75px;
+}
+
+.ConvertingSpeech h3 span {
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    background: linear-gradient(180deg, #17FEA4 0%, #5D2ABF 100%);
+    filter: blur(100px);
+    transform: matrix(0, 1, 1, 0, 0, 0);
+}
+
+.speech_box {
+    border: 1px solid rgba(212, 210, 210, 0.397);
+    border-radius: 18px;
+    padding: 20px 20px 83px;
+}
+
+.speech_box .realRecordingImage {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.iconWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.iconWrapper .ellips {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%, -46%);
+}
+
+.realRecordingImage img {
+    margin-top: 15px;
+}
+
+
+.realRecordingImage .stopIcon {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-43%, -27%);
+}
+
+.answer_text {
+    margin: 5px 0;
+}
+
+.answer_text span {
+    color: #fff;
+}
+
+.typingAnimation {
+    position: relative;
+    left: -9983px;
+    top: 1px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #fff;
+    box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+    0% {
+        box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+
+    16.667% {
+        box-shadow: 9984px -10px 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+
+    33.333% {
+        box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+
+    50% {
+        box-shadow: 9984px 0 0 0 #fff, 9999px -10px 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+
+    66.667% {
+        box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+
+    83.333% {
+        box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px -10px 0 0 #fff;
+    }
+
+    100% {
+        box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+}
+
+.recorderIcon {
+    margin: 0 auto;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.speech_box p {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 39px;
+}
+
+@media (max-width: 917px) {
+    .ConvertingSpeech .title p {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .speech_box .realRecordingImage {
+        width: 120px;
+        height: 120px;
+    }
+
+    .realRecordingImage .recorderIcon {
+        width: 110px;
+    }
+}
+
+@media (max-width: 650px) {
+    .ConvertingSpeech h3 {
+        width: 100%;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .title p {
+        text-align: center;
+    }
+
+    .speech_box .realRecordingImage {
+        width: 100px;
+        height: 100px;
+    }
+
+    .realRecordingImage img {
+        width: 100px;
+    }
+
+    .realRecordingImage .stopIcon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 440px) {
+    .realRecordingImage .stopIcon {
+        transform: translate(-43%, -20%);
+    }
+
+    .realRecordingImage .ellips {
+        width: 90px;
+    }
+}

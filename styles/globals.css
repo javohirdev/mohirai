@@ -1,0 +1,593 @@
+/* @font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Regular.ttf);
+  font-weight: 400;
+} */
+
+/* @font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
+  font-weight: 700;
+} */
+
+/* @font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Black.ttf);
+  font-weight: 800;
+} */
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Arial Narrow Bold", sans-serif; 
+  -webkit-tap-highlight-color: transparent; 
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.item.active {
+  color: #8d53fd;
+}
+
+.xat {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__fluid {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 86px;
+}
+
+.containerroadmap {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .container__fluid {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container__fluid {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container__fluid {
+    padding: 0 15px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  background: linear-gradient(9deg, #8d53fd -1.4%, #b38cff 95.18%),
+    linear-gradient(0deg, #8d53fd, #8d53fd);
+  box-shadow: 0px 8px 32px rgb(141 83 253 / 24%);
+  padding: 13px 24px;
+  color: white !important;
+  border-radius: 12px;
+}
+
+.btn:hover {
+  background: blueviolet;
+}
+
+.pswp img {
+  object-fit: contain !important;
+}
+
+.pswp__img--placeholder {
+  display: none !important;
+}
+
+.bosqich.faol,
+.bosqich.active,
+.bosqich.активный {
+  color: #26db59;
+  background-color: #26db5926;
+}
+
+.bosqich.yakunlangan,
+.bosqich.законченный,
+.bosqich.finished {
+  background: rgba(253, 83, 83, 0.15);
+  color: rgba(253, 83, 83, 1);
+}
+
+.bosqich.soon,
+.bosqich.tez.orada,
+.bosqich.скоро {
+  background: rgba(111, 111, 111, 0.15);
+  color: #6f6f6f;
+}
+
+.accordion__section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-left: 3px solid gray;
+  padding-left: 10px;
+  margin: 7px 0 7px;
+  height: fit-content;
+}
+
+.dropdown {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.dropdown .accordion {
+  padding: 6px 10px;  
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .dropdown .accordion {
+    width: 80%;
+  }
+}
+
+.dropdown .accordion__content {
+  padding: 0px 10px;  
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 18px 0;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  outline: none;
+  transition: background-color 0.6s ease;
+  text-align: left;
+}
+
+.accordion div {
+  width: fit-content;
+}
+
+.accordion .open {
+  background: rgba(255, 255, 255, 0.08);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: #fff;
+}
+
+.accordion .open span,
+.accordion .open h2,
+.accordion .open h1 {
+  display: block;
+  width: 15px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.active.accordion__section .open span {
+  background-color: #00C5FF;
+}
+
+.accordion .open h2 {
+  transform: rotate(90deg) translateX(-2px);
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .accordion:hover, */
+.active {
+  background-color: transparent;
+}
+
+.accordion__section.active {
+  border-left: 3px solid #00C5FF;
+}
+
+/* Style the accordion content title */
+.accordion__title {
+  color: #12273c;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+@media (max-width: 767px) {
+  .accordion__title {
+    font-size: 15px;
+  }
+
+  .accordion__text {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .accordion {
+    /** accordion open & close buttons **/
+    width: 100%;
+  }
+}
+
+/* Style the accordion chevron icon */
+.accordion__icon {
+  margin-left: 10px;
+  transition: transform 0.6s ease;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+  background-color: transparent;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+  opacity: 1;
+  /* border:  1px solid rgba(0, 0, 0, 0.08); */
+}
+
+/* Style the accordion content text */
+.accordion__text {
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 18px;
+}
+
+/***** partners slider *****/
+
+.sliders .owl-carousel .owl-stage {
+  display: flex !important;
+  align-items: center;
+}
+
+/* dots style owl carousel */
+
+.owl-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.owl-carousel button.owl-dot {
+  width: 8px;
+  height: 8px;
+  background: #e7e7e7 !important;
+  margin: 0 3px;
+  border-radius: 50%;
+}
+
+.owl-carousel button.owl-dot.active {
+  background: #8d53fd !important;
+}
+
+/********* swiper nav styles***************/
+
+.swiper-slide {
+  height: auto !important;
+}
+
+.swiper {
+  position: static !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  box-shadow: 0px 4px 12px rgba(141, 83, 253, 0.14);
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0px 4px 12px rgba(141, 83, 253, 0.14);
+  backdrop-filter: blur(30px);
+}
+
+.swiper-button-prev {
+  left: -5% !important;
+}
+
+.swiper-button-next {
+  right: -5% !important;
+}
+
+.initpartners .swiper-button-prev {
+  left: -3% !important;
+}
+
+.initpartners .swiper-button-next {
+  right: -3% !important;
+}
+
+@media (max-width: 576px) {
+  .initpartners .swiper {
+    overflow: visible;
+  }
+
+  .initpartners .swiper .swiper-button-prev, 
+  .initpartners .swiper .swiper-button-next {
+    display: none;
+  } 
+
+  .our_goal .swiper {
+    overflow: visible;
+  }
+
+  .our_goal .swiper .swiper-button-prev, 
+  .our_goal .swiper .swiper-button-next {
+    display: none;
+  } 
+}
+
+
+
+.our_goal .swiper-button-prev::after,
+.initpartners .swiper-button-prev::after
+ {
+  position: absolute;
+  content: url("../public/arrow-left-white.png") !important;
+  left: 0px;
+  top: -7px;
+  width: 100%;
+  height: 100%;
+}
+
+.our_goal .swiper-button-next::after,
+.initpartners .swiper-button-next::after
+ {
+  position: absolute;
+  transform: rotate(180deg);
+  content: url("../public/arrow-left-white.png") !important;
+  left: 0px;
+  top: 7px;
+  width: 100%;
+  height: 100%;
+}
+
+.our_goal .swiper-button-next::after {
+  left: -4px;
+}
+.our_goal .swiper-button-prev::after {
+  left: 4px;
+}
+
+.swiper-button-prev::after {
+  position: absolute;
+  content: url("../public/arrow-left.svg") !important;
+  left: 1px;
+  top: -6px;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next::after {
+  position: absolute;
+  content: url("../public/arrow-right.svg") !important;
+  left: 1px;
+  top: -6px;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* nav style owl carousel */
+
+.owl-carousel.owl-loaded .owl-nav button.owl-prev,
+.owl-carousel.owl-loaded .owl-nav button.owl-next {
+  border-radius: 50%;
+  background-color: #fff;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0px 4px 12px rgba(141, 83, 253, 0.14);
+  backdrop-filter: blur(60px);
+  position: absolute;
+  top: 45%;
+  color: #fff !important;
+}
+
+.owl-carousel.owl-loaded .owl-nav button.owl-prev {
+  left: -7%;
+}
+
+.owl-carousel.owl-loaded .owl-nav button.owl-prev::after {
+  position: absolute;
+  content: url("../public/arrow-left.svg");
+  left: 0;
+  top: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.owl-carousel.owl-loaded .owl-nav button.owl-next {
+  right: -7%;
+}
+
+.owl-carousel.owl-loaded .owl-nav button.owl-next ::after {
+  position: absolute;
+  content: url("../public/arrow-right.svg");
+  left: 0;
+  top: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.initpartners .owl-carousel.owl-loaded .owl-nav button.owl-prev {
+  left: -4%;
+}
+
+.initpartners .owl-carousel.owl-loaded .owl-nav button.owl-next {
+  right: -4%;
+}
+
+/************STAT styles*************/
+@media (max-width: 1200px) {
+  .swiper-button-prev {
+    left: -2% !important;
+  }
+  
+  .swiper-button-next {
+    right: -2% !important;
+  }
+}
+@media (max-width: 767px) {
+  .stat_top_chart .recharts-responsive-container {
+    width: 700px !important;
+  }
+
+  .stat_bottom_chart .recharts-responsive-container {
+    width: 600px !important;
+  }
+}
+
+/************Register userlist style*************/
+.userlist {
+  margin-top: 100px;
+}
+
+table {
+  --accent-color: #362f4b;
+  --text-color: slategray;
+  --bgColorDarker: #ececec;
+  --bgColorLighter: #fcfcfc;
+  --insideBorderColor: lightgray;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+  color: var(--text-color);
+  table-layout: fixed;
+}
+
+table caption {
+  margin: 1rem 0;
+  color: slategray;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.055rem;
+  text-align: center;
+}
+
+table thead tr {
+  color: whitesmoke;
+  background-color: var(--accent-color);
+  font-size: 1rem;
+}
+
+table tbody tr {
+  border: 1px solid var(--insideBorderColor);
+  background-color: var(--bgColorDarker);
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: var(--bgColorLighter);
+}
+
+table th {
+  letter-spacing: 0.075rem;
+}
+
+table th,
+table td {
+  padding: 0.75rem 1rem;
+  font-weight: normal;
+  text-align: left;
+}
+
+table th:nth-child(4),
+table td:nth-child(4) {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    border: none;
+  }
+
+  table caption {
+    padding: 0.75rem 1rem;
+    border-radius: 6px 6px 0 0;
+    color: whitesmoke;
+    font-size: 1.35rem;
+    background-color: var(--accent-color);
+  }
+
+  table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  table tbody tr {
+    margin-bottom: 2rem;
+    display: block;
+  }
+
+  table td {
+    font-size: 0.875rem;
+    text-align: right;
+    display: block;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.075rem;
+    text-transform: uppercase;
+    float: left;
+    opacity: 0.5;
+  }
+
+  table td:not(:last-child) {
+    border-bottom: 1px solid var(--insideBorderColor);
+  }
+}
+
+/************ END Register userlist style*************/
+
+
+/************ recording styles *************/
+
+.AudioRecorder .audio-recorder   {
+  display: none !important;
+}

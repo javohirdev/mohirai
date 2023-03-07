@@ -1,0 +1,83 @@
+{
+  "partners": [
+    {
+      "id": 1,
+      "languages_code": "uz-UZ",
+      "title": "Hamkor sifatida qo'shiling",
+      "descr": "UzbekVoice tashabbusi bilan hamkorlik qilishni istasangiz, iltimos shu yerda ma'lumotlaringizni qoldiring. Homiylar, OAV, bloggerlar, dasturchilar va loyihani rivojlantirishga hissa qo'sha oladidan barchani hamkorlikka taklif qilamiz.",
+      "label_name": "Ismingiz",
+      "label_phone": "Telefon raqamingiz",
+      "label_comment": "Izoh",
+      "placeholder_name": "Ismingizni kiriting",
+      "placeholder_comment": "Izoh qoldiring (ixtiyoriy)",
+      "button": "Ariza yuborish",
+      "thanks": "Murojatingiz uchun raxmat. Biz siz bilan yaqin orada aloqaga chiqamiz."
+    },
+
+    {
+      "id": 2,
+      "languages_code": "ru-RU",
+      "title": "Стать спонсором",
+      "descr": "Если вы хотите сотрудничать с инициативой UzbekVoice, пожалуйста, оставьте свою информацию здесь. К сотрудничеству приглашаем спонсоров, СМИ, блогеров, разработчиков и всех, кто может внести свой вклад в развитие проекта.",
+      "label_name": "Имя",
+      "label_phone": "Номер телефона",
+      "label_comment": "Комментарий",
+      "placeholder_name": "Введите свое имя",
+      "placeholder_comment": "Оставьте свои комментарии (необязательно)",
+      "button": "Отправить заявку",
+      "thanks": "Спасибо за ваш запрос. Мы свяжемся с Вами в скором времени."      
+    },
+    {
+      "id": 3,
+      "languages_code": "en-US",
+      "title": "Become a partner",
+      "descr": "If you want to cooperate with the UzbekVoice initiative, please leave your information here. We invite sponsors, mass media, bloggers, programmers and everyone who can contribute to the development of the project.",
+      "label_name": "Name",
+      "label_phone": "Phone number",
+      "label_comment": "Comment",
+      "placeholder_name": "Enter your name",
+      "placeholder_comment": "Leave your comments (optional)",
+      "button": "Apply now",
+      "thanks": " Thank you for your message. We will contact you as soon as possible."   
+    }
+  ],
+  "waitless": [
+    {
+      "id": 1,
+      "languages_code": "uz-UZ",
+      "title": "Navbatga turish",
+      "descr": "Yangiliklarga obuna bo’lish",
+      "label_name": "Ismingiz",
+      "label_comment": "Telefon raqamingiz",
+      "placeholder_name": "Ismingizni kiriting",
+      "placeholder_email": "",
+      "button": "Navbatga turish",
+      "thanks": "Murojatingiz uchun raxmat."
+    },
+
+    {
+      "id": 2,
+      "languages_code": "ru-RU",
+      "title": "Записаться в очередь",
+      "descr": "Подписаться на новости",
+      "label_name": "Имя",
+      "label_comment": "Номер телефона",
+      "placeholder_name": "Введите свое имя",
+      "placeholder_email": "",
+      "button": "Записаться в очередь",
+      "thanks": "Спасибо за ваш запрос."
+    },
+    {
+      "id": 3,
+      "languages_code": "en-US",
+      "title": "Join to waitlist",
+      "descr": "Subscribe to news",
+      "label_name": "Name",
+      "label_comment": "Phone number",
+      "placeholder_name": "Enter your name",
+      "placeholder_email": "",
+      "button": "Join to waitlist",
+      "thanks": "Thank you for your message."
+    }
+  ]
+}

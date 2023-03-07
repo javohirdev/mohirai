@@ -1,0 +1,271 @@
+.container {
+    padding: 200px 0px 0;
+}
+
+.hero_blur {
+    position: absolute;
+    left: 30%;
+    top: -30%;
+    width: 400px;
+    height: 400px;
+    z-index: 98;
+    background: linear-gradient(180deg, #8324ff98 0%, #5D2ABF 100%);
+    filter: blur(200px);
+    transform: matrix(0, 1, 1, 0, 0, 0);
+}
+
+
+.headWrapper h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    margin-bottom: 45px;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3px;
+    width: fit-content;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+
+.filter span {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: right;
+    background: transparent;
+    border-radius: 30px;
+    padding: 12px 35px;
+    color: #FFFFFF;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.filter .active {
+    background: linear-gradient(92.27deg, #019EF9 2.38%, #8A55FD 94.52%);
+}
+
+.bodyWarpper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    flex-grow: 1;
+}
+
+.bodyWarpper .card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+.cardHeader {
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 150px;
+}
+
+.cardHeader_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardHeader_head h4 {
+    background: linear-gradient(90.51deg, #17FEA4 9.45%, #FFFFFF 98.09%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+}
+
+.starter .cardHeader_head h4 {
+    background: linear-gradient(93.96deg, #00C8FF 20.11%, #FFFFFF 96.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.growth .cardHeader_head h4 {
+    background: linear-gradient(93.96deg, #8D53FD 23.23%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.premium .cardHeader_head h4 {
+    background: linear-gradient(91.41deg, #F9A74E 18.26%, #FFFFFF 99.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cardHeader p {
+    font-weight: 400;
+    font-size: 16px;
+    /* width: 220px; */
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cardBody {
+    padding: 24px 20px;
+}
+
+.flexsible {
+    height: 370px;
+}
+
+.cardBody p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cardBody h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+    margin-top: 24px;
+}
+
+.premium .cardBody h5 {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.cardBody_body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.cardBody_body span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+.cardBody a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #007BF4;
+    display: flex;
+    align-items: center;
+    margin: 30px 0 50px;
+}
+
+.cardBody a img {
+    margin-left: 8px;
+}
+
+.cardBody button {
+    color: #33BEF9;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: transparent;
+    padding: 15px 0;
+    width: 100%;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.starter .cardBody button {
+    background: #169BD3;
+    color: #FFFFFF;
+    bottom: none;
+}
+
+.growth .cardBody button {
+    background: #8D53FD;
+    color: #FFFFFF;
+    bottom: none;
+}
+
+.premium .cardBody button {
+    background: #E39239;
+    color: #FFFFFF;
+    bottom: none;
+}
+
+@media (max-width: 1400px) {
+    .bodyWarpper {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+    }
+
+    .card h4 {
+        font-size: 18px;
+    }
+
+    .flexsible {
+        height: auto;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .bodyWarpper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .bodyWarpper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .headWrapper h3 {
+        margin: 0 auto 45px;
+    }
+
+    .hero_blur {
+        width: 200px;
+        height: 200px;
+        left: 20%;
+        filter: blur(80px);
+        top: -10%;
+    }
+
+    .filter {
+        width: 100%;
+    }
+
+    .filter span {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .filter span {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}

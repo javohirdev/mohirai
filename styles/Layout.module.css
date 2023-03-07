@@ -1,0 +1,30 @@
+  .parentWrapper {
+    background-color: #0C0916; 
+    overflow: hidden;
+  }
+
+  .containerfluid {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+  
+
+  @media (max-width: 1200px) {
+    .containerfluid {
+      padding: 0 30px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .containerfluid {
+      padding: 0 24px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .containerfluid {
+      padding: 0 15px;
+    }
+  }

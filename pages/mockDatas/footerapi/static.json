@@ -1,0 +1,41 @@
+{
+    "footer": [
+      {
+        "id": 1,
+        "languages_code": "uz-UZ",
+        "powered_by": "Powered by:",
+        "guide": "Qo'llanma",
+        "join_in_project": "Loyihada qatnashish",
+        "partners": "Hamkorlar",
+        "github": "Github",
+        "telegram": "Telegram jamoa",
+        "mozillo": "Mozilla nutqi",
+        "descr":"Mohir AI © 2023. Barcha huquqlar himoyalangan."        
+      },
+      {
+        "id": 2,
+        "languages_code": "ru-RU",
+        "powered_by": "Powered by:",
+        "guide": "Руководство",
+        "join_in_project": "Участие в проекте",
+        "partners": "Партнеры",
+        "github": "Github",
+        "telegram": "Присоединиться к сообществу",
+        "mozillo": "Дискурс Mozilla",
+        "descr":"Mohir AI © 2023. Все права защищены."
+      },
+      {
+        "id": 3,
+        "languages_code": "en-US",
+        "powered_by": "Powered by:",
+        "guide": "Guide",
+        "join_in_project": "Join in the project",
+        "partners": "Partners",
+        "github": "Github",
+        "telegram": "Telegram team",
+        "mozillo": "Mozilla discourse",
+        "descr":"Mohir AI © 2023. All rights reserved."
+      }
+    ]
+  }
+  

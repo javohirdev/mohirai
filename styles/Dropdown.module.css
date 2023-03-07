@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap');
+
+.question {
+  margin-top: 132px;
+  text-align: center;
+  position: relative;
+  padding: 0;
+}
+
+.question h3 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 53px;
+  letter-spacing: 0.0022em;
+  margin: 32px 0px;
+  text-align: left;
+  font-weight: 700;
+  color: #FFFFFF;
+  width: 300px;
+}
+
+.faqSides {
+  /** question and email text sides **/
+  display: flex;
+  align-items: flex-start;
+}
+
+.main {
+  /** accordion_section_main **/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+}
+
+@media (max-width: 600px) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.accordion_title {
+  color: #171717;
+  font-weight: 500;
+  font-size: 15px;
+  column-gap: 20px;
+}
+
+.accordion_text {
+  display: block;
+  width: 100%;
+  color: #8d8c8c !important;
+  text-align: left;
+  font-weight: 400;
+  font-size: 13px !important;
+  line-height: 25px;
+  padding: 3px 0;
+  margin-left: 0 !important;
+}
+
+.accordion_readbtn {
+  /** accordion read element **/
+  padding-left: 10px;
+}
+
+.dropBg .accordion_text,
+.dropBg .accordion_title {
+  color: #171717;
+}
+
+.ChevronMG  {
+  display: block;
+}
+
+.Chevron {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .dropBg .accordion_text,
+  .dropBg .accordion_title {
+    color: #fff !important;
+  }
+
+  .dropBg .Chevron {
+    display: block;
+  } 
+  
+  .dropBg .ChevronMG {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1050px) {
+  .accordion_text {
+    padding-left: 0 !important;
+    padding: 6px 0 !important;
+    margin: 0 !important;
+  } 
+
+  .ChevronMG {
+    display: none;
+  }
+
+  .Chevron {
+    display: none;
+  }
+}
+
+@media (min-width: 665px) and (max-width: 767px) {
+  .main {
+    /** accordion_section_main **/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .question {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    text-align: center;
+    position: relative;
+    padding: 0;
+  }
+
+  .question h3 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: 0.0022em;
+    color: #fff;
+    margin: 32px 0px;
+  }
+
+  .accordion_title {
+    font-size: 15px;
+  }
+
+  .accordion_text {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .faqSides {
+    display: inline;
+  }
+
+  .faqButton {
+    padding: 15px 0;
+  }
+}

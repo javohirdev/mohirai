@@ -1,0 +1,168 @@
+.partners {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 198px;
+}
+
+.detail {
+  width: 586px;
+}
+
+.detail h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #FFFFFF;
+  width: 400px;
+}
+
+.detail p {
+  width: 70%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-top: 42px;
+}
+
+.detail button {
+  margin-top: 74px;
+  display: inline-block;
+  background: linear-gradient(91.97deg, #00C7FE -34.54%, #007BF4 34.16%, #8D53FD 97.37%);
+  border-radius: 30px;
+  color: white;
+  padding: 16px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+}
+
+.detail img {
+  margin-left: 5px;
+  transform: rotate(180deg);
+}
+
+.imgunit {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  border-radius: 94% 117% 96% 103%;
+  background: radial-gradient(145.66% 116.77% at 50.86% 20.59%, rgba(23, 252, 224, 0) 50.63%, #00C7FF 100%);
+}
+
+.imgunit .img_wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 94% 117% 96% 103%;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgunit img {
+  width: 320px;
+  margin-left: 24px;
+  margin-top: -13px;
+}
+
+.blur_bg {
+  width: 430px;
+  height: 430px;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  mix-blend-mode: color;
+  filter: blur(30px);
+  background: linear-gradient(152.79deg, #17FEE0 32.68%, #027BF2 47.85%, #00C8FF 69.26%);
+  ;
+}
+
+
+
+@media (max-width:1280px) {
+  .imgunit img {
+    width: 260px;
+  }
+}
+
+@media (max-width:990px) {
+  .partners {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgunit {
+    display: none;
+  }
+
+  .detail {
+    width: 100%;
+  }
+
+  .image img {
+    width: 520px;
+
+  }
+
+  .detail h2 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 48px;
+    margin: 12px 0px 40px;
+  }
+
+  .detail p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .detail a {
+    margin-top: 64px;
+    padding: 21px 58px;
+  }
+}
+
+
+@media (max-width:500px) {
+  .partners {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .detail p{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .detail h2 {
+    font-size: 28px;
+    margin: 12px auto 10px;
+    width: 330px;
+  }
+
+  .detail a {
+    margin: 50px auto 0;
+    font-size: 18px;
+  }
+
+  .detail button {
+    margin: 0 auto;
+    margin-top: 74px;
+  }
+}
+
+@media (max-width:360px) {
+
+  .detail h2 {
+    margin-top: 50px;
+    width: auto;
+  }
+}

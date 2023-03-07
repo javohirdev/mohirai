@@ -1,0 +1,173 @@
+.ConvertingSpeech {
+    margin-top: 200px;
+}
+
+.ConvertingSpeech .title {
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.title p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.ConvertingSpeech h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    position: relative;
+    color: #fff;
+    width: 467px;
+    margin-right: 79px;
+}
+
+.ConvertingSpeech h3 span {
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    background: linear-gradient(180deg, #17FEA4 0%, #5D2ABF 100%);
+    filter: blur(100px);
+    transform: matrix(0, 1, 1, 0, 0, 0);
+}
+
+.speech_box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.card {
+    width: calc(32% + 4px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 24px 24px;
+}
+
+.card div {
+    height: 180px;
+}
+
+.card h4 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: -0.002em;
+    color: #FFFFFF;
+}
+
+.card p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-top: 18px;
+    margin-bottom: 40px;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto;
+}
+
+.card button {
+    background: linear-gradient(90deg, #8D53FD 0%, #33BEF9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: 1px solid rgba(194, 191, 191, 0.692);
+    padding: 18px 0;
+    border-radius: 40px;
+    width: 100%;
+    margin-top: 49px;
+}
+
+@media (max-width: 1100px) {
+    .card h4 {
+        font-size: 23px;
+        line-height: 24px;
+    }
+
+    .card p {
+        font-size: 17px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 932px) {
+    .ConvertingSpeech .title p {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 49%;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .ConvertingSpeech {
+        margin-top: 140px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .ConvertingSpeech {
+        margin-top: 130px;
+    }
+
+    .ConvertingSpeech h3 {
+        width: 100%;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .title p {
+        text-align: center;
+    }
+
+    .card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card p {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .card {
+        padding: 20px 15px;
+    }
+
+    .card h4 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

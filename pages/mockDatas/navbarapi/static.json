@@ -1,0 +1,76 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "languages_code": "uz-UZ",
+      "malumot": "Ma`lumotlar",
+      "malumotlar": [
+        { "path": "/malumot", "value": "Ovoz korpusi" }        
+      ],
+      "bosqich": "Bosqichlar",
+      "bosqichlar": ["1-bosqich", "2-bosqich"],
+      "hakaton": "Hakaton",
+      "hakatonlar": ["1-hakaton", "2-hakaton"],
+      "roadmap": "Roadmap",
+      "pricing": "Narxlar",
+      "qollanma": "Qo'llanma",
+      "boshqa": "Boshqa",
+      "boshqalar": [
+        { "path": "/yangilik", "value": "Yangiliklar" },
+        { "path": "/hamkorlar", "value": "Hamkorlar" },
+        { "path": "/resus", "value": "Resuslar" }
+      ],
+      "button": "Ishtirok eting",
+      "waitless": "Navbatga turish",
+      "contact": "Bog`lanish"
+    },
+    {
+      "id": 2,
+      "languages_code": "ru-RU",
+      "malumot": "Данных",
+      "malumotlar": [
+        { "path": "/malumot", "value": "Речевой корпус" }        
+      ],
+      "bosqich": "Этапы",
+      "bosqichlar": ["Этап 1", "Этап 2"],
+      "hakaton": "Хакатон",
+      "hakatonlar": ["1-хакатон", "2-хакатон"],
+      "roadmap": "Дорожная карта",
+      "pricing": "Цены",
+      "qollanma": "Руководство",
+      "boshqa": "Другой",
+      "boshqalar": [
+        { "path": "/yangilik", "value": "Новости" },
+        { "path": "/hamkorlar", "value": "Партнеры" },
+        { "path": "/resus", "value": "Ресурсы" }
+      ],
+      "button": "Присоединиться",
+      "waitless": "Записаться в очередь",
+      "contact": "Свяжитесь с нами"
+    },
+    {
+      "id": 3,
+      "languages_code": "en-US",
+      "malumot": "Datas",
+      "malumotlar": [
+        { "path": "/malumot", "value": "Speech corpus" }        
+      ],
+      "bosqich": "Stages",
+      "bosqichlar": ["stage 1", "stage 2"],
+      "hakaton": "Hackathon",
+      "hakatonlar": ["1st hackathon", "2nd hackathon"],
+      "roadmap": "Roadmap",
+      "pricing": "Pricing",
+      "qollanma": "Guide",
+      "boshqa": "Other",
+      "boshqalar": [
+        { "path": "/yangilik", "value": "News" },
+        { "path": "/hamkorlar", "value": "Partners" },
+        { "path": "/resus", "value": "Resources" }
+      ],
+      "button": "Join",
+      "waitless": "Join to waitlist",
+      "contact": "Contact us"
+    }
+  ]
+}

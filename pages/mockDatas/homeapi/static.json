@@ -1,0 +1,255 @@
+{
+  "content": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "O'zbek nutqini kompyuterga o'rgatish tashabbusi",
+      "description": "Siz va biz buni uddalay olamiz! O'zbek tilini ommalashtirishda o'z hissangizni qo'shing!",
+      "button1": "Ishtirok etish",
+      "button2": "Jamiyatga qo'shilish"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "An initiative to teach Uzbek speech to computers",
+      "description": "You and I can do it! Contribute to popularizing the Uzbek language!",
+      "button1": "Participate",
+      "button2": "Meet the community"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Инициатива по обучению узбекской речи на компьютере",
+      "description": "Вместе мы сможем этого достичь! Внесите свой вклад в популяризацию узбекского языка!",
+      "button1": "Принять участие",
+      "button2": "Присоединиться к сообществу"
+    }
+  ],
+  "maqsad": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "Ko’p ishlatiladigan keyslar",
+      "card_title": "Transkriptsiya",
+      "card_title2": "Diktant",
+      "card_title3": "Ovozli buyruqlar",
+      "card_desc": "Uzunda uzoq audiolarni osonlik bilan mant ko’rinishiga keltiring.",
+      "card_desc2": "Nutq bilan ishlaydigan, shu jumladan yozishga qiynaladigan odamlarga qulaylik tug’dirish maqsadida.",
+      "card_desc3": "Ovozli buyruqlar bilan ishlash mashina haydovchilar va yozishga layoqatsizlar uchun ishlatiladi."
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Ko’p ishlatiladigan keyslar",
+      "card_title": "Open Source",
+      "card_title2": "Research",
+      "card_title3": "Creativity",
+      "card_desc": "Collecting the open-source Uzbek speech database",
+      "card_desc2": "Creating opportunities for scientific cooperation and research in the field of artificial intelligence",
+      "card_desc3": "Opening the way for creativity to developers in the field of artificial intelligence"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Ko’p ishlatiladigan keyslar",
+      "card_title": "Открытый исходный код",
+      "card_title2": "Исследовательская работа",
+      "card_title3": "Креативность",
+      "card_desc": "Сбор базы данных узбекской речи с открытым исходным кодом",
+      "card_desc2": "Создание возможностей для научного сотрудничества и исследований в области искусственного интеллекта",
+      "card_desc3": "Открывать путь к креативности для разработчиков в области искусственного интеллекта"
+    }
+  ],
+  "case": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "Ko’p ishlatiladigan keyslar",
+      "card_title": "Audio kitoblar",
+      "card_title2": "Marketing nutqlari",
+      "card_title3": "Digital darsliklar",
+      "card_desc": "Osonlik bilan matn formatdagi kitoblarni audio kitoblarga aylantiring",
+      "card_desc2": "Osonlik bilan Marketing nutqlarini professional ovozli nutqlariga aylantiring",
+      "card_desc3": "Osonlik bilan audio va video darsliklaringiz uchun, bir zumda, ovozli nutq yarating"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Ko’p ishlatiladigan keyslar",
+      "card_title": "Audio kitoblar",
+      "card_title2": "Marketing nutqlari",
+      "card_title3": "Digital darsliklar",
+      "card_desc": "Osonlik bilan matn formatdagi kitoblarni audio kitoblarga aylantiring",
+      "card_desc2": "Osonlik bilan Marketing nutqlarini professional ovozli nutqlariga aylantiring",
+      "card_desc3": "Osonlik bilan audio va video darsliklaringiz uchun, bir zumda, ovozli nutq yarating"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Ko’p ishlatiladigan keyslar",
+      "card_title": "Audio kitoblar",
+      "card_title2": "Marketing nutqlari",
+      "card_title3": "Digital darsliklar",
+      "card_desc": "Osonlik bilan matn formatdagi kitoblarni audio kitoblarga aylantiring",
+      "card_desc2": "Osonlik bilan Marketing nutqlarini professional ovozli nutqlariga aylantiring",
+      "card_desc3": "Osonlik bilan audio va video darsliklaringiz uchun, bir zumda, ovozli nutq yarating"
+    }
+  ],
+  "statistic": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "Statistika",
+      "description": "Maqsadimizga yetish uchun muvaffaqiyat ko'rsatkichlari.",
+      "parag1": "dan ortiq jumla",
+      "parag2": "soatdan ko'p ovoz"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Statistics",
+      "description": "Indicators of success to achieve our goals",
+      "parag1": "+ sentences",
+      "parag2": "+ hours of voice"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Статистика",
+      "description": "Показатели успеха в достижении нашей цели.",
+      "parag1": "+ предложений",
+      "parag2": "+ часов голоса"
+    }
+  ],  
+  "steps": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "Ovoz yigish bosqichlari",
+      "button": "Batafsil"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Voice collection campaign phases",
+      "button": "Read more"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Этапы кампании сбора голосов",
+      "button": "Подробнее"
+    }
+  ],
+  "seocontent": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "Mohir AI yordamida ovozni matnga o'giring",
+      "desc": "Mohir AI yordamida ovozni matnga o'giring"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Преобразование речи в текст с помощью Mohir AI",
+      "button": "Преобразование речи в текст с помощью Mohir AI"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Transcribe real-world audio with an API call",
+      "button": "Transcribe real-world audio with an API call"
+    }
+  ],
+  "contribution": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "Qanday hissa qo'shsa bo'ladi?",
+      "card_title": "Ovozingiz bilan jumlani o'qing",
+      "card_title2": "O'qilgan jumlani tinglab tasdiqlang",
+      "card_title3": "Matnlarni tekshiring",
+      "card_desc": "Ko'rsatilgan matnni o'zbek tilida Mozilla Common Voice platformasida o'qib ovozingizni yozing. Ishonavering, bu eng qiziqarli mashg'ulotlarda biri!",
+      "card_desc2": "O'qilgan jumla va matnilarni to'g'riligini taqqoslang. Bu juda oson.",
+      "card_desc3": "Yig'ilgan matnlarni grammatikaga asoslanib tasdiqlang. Shundan so'ng bu jumla ma'lumotlar bazasiga qo'shiladi.",
+      "button": "Loyihada ishtirok etish"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "How can I contribute?",
+      "card_title": "Read the sentence out loud",
+      "card_title2": "Listen and check the recorded voice",
+      "card_title3": "Verify the texts",
+      "card_desc": "Record your voice by reading the displayed text in Uzbek on the Mozilla Common Voice platform. This is one of the most fun activities!",
+      "card_desc2": "Compare if the recorded sentence matches the text. It's very simple.",
+      "card_desc3": "Check the texts based on grammar rules. The verified sentence is then added to the database.",
+      "button": "Participate"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Как внести свой вклад?",
+      "card_title": "Прочтите предложение вслух",
+      "card_title2": "Прослушайте и проверьте записанный голос",
+      "card_title3": "Проверьте тексты",
+      "card_desc": "Запишите свой голос, прочитав отображаемый текст на узбекском языке на платформе Mozilla Common Voice. Это одно из самых увлекательных занятий!",
+      "card_desc2": "Сравните, соответствует ли записанное предложение тексту. Это очень просто.",
+      "card_desc3": "Проверьте тексты на основе правил грамматики. Только после этого предложение добавляется в базу данных.",
+      "button": "Принять участие"
+    }
+  ],
+  "topuser": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "2- bosqich g'oliblari",
+      "top_listener": "Eng yaxshi ovoz tekshiruvchi.",
+      "top_speaker": "Eng yaxshi ovoz yozuvchi",
+      "more": "Batafsil"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Leading members",
+      "top_listener": "The most active listener",
+      "top_speaker": "The most active speaker",
+      "more": "Read more"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Активные участники",
+      "top_listener": "Самый активный слушатель",
+      "top_speaker": "Самый активный спикер",
+      "more": "Подробнее"
+    }
+  ],
+  "ourpartner": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "Biz bilan hamkorlik qilish",
+      "desc": "O'zbekistonda sun’iy intellekt sohasini rivojlantirishga hissa qo‘shish istagida bo‘lganlar bilan hamkorlik qilishga doim ochiqmiz.",
+      "button": "Hamkorlik qilish"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Cooperation with us",
+      "desc": "We are always open to cooperation with those who want to contribute to the development of artificial intelligence in Uzbekistan.",
+      "button": "Cooperate"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Сотрудничество",
+      "desc": "Мы всегда открыты к сотрудничеству с теми, кто хочет внести свой вклад в развитие искусственного интеллекта в Узбекистане.",
+      "button": "Сотрудничать"
+    }
+  ],
+  "partner": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "Tashabbus hamkorlari",
+      "desc": "UzbekVoice.ai jamoasi va hamkorlari ochiq fikrlovchilarni birlashtiradi va hamfikrlarni korporativ, institutsional hamda ilmiy hamkorlikka chaqiradi."
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Initiative partners",
+      "desc": "The UzbekVoice.ai team and partners unite enthusiastic people and invite like-minded people to corporate, institutional and scientific cooperation."
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Партнеры инициативы",
+      "desc": "Команда и партнеры UzbekVoice.ai объединяют людей с открытыми взглядами и приглашают единомышленников к корпоративному, институциональному и научному сотрудничеству."
+    }
+  ],
+  "faq": [
+    {
+      "languages_code": "uz-UZ",
+      "title": "Savollar va Javoblar"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "FAQ"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Вопросы и ответы"
+    }
+  ]
+}
