@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "../styles/Modal.module.css";
 import PartnersApi from "../pages/mockDatas/partnersapi/static.json";
 import { useRouter } from "next/router";
@@ -54,10 +54,23 @@ export default function Modal({ setModal }) {
   };
 
   const [token, setToken] = useState(null);
+  const captchaRef = useRef(null);
 
-  const handleTokenChange = (token) => {
-    setToken(token);
+  const onLoad = () => {
+    // this reaches out to the hCaptcha JS API and runs the
+    // execute function on it. you can use other functions as
+    // documented here:
+    // https://docs.hcaptcha.com/configuration#jsapi
+    captchaRef.current.execute();
   };
+
+  useEffect(() => {
+
+    if (token)
+      console.log(`hCaptcha Token: ${token}`);
+
+  }, [token]);
+
 
   return (
     PartnersApi.waitless
@@ -101,6 +114,9 @@ export default function Modal({ setModal }) {
                     <div>
                       <HCaptcha
                         sitekey={`9a098deb-3095-4202-97c0-347d8a1b43e2`}
+                        onLoad={onLoad}
+                        onVerify={setToken}
+                        ref={captchaRef}
                       />
                     </div>
 
