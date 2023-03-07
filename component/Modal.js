@@ -121,7 +121,7 @@ export default function Modal({ setModal }) {
                       )}
                     </div>
 
-                    <button className={btnStyle ? styles.activeBtn : ''} disabled={isHCaptchaChecked()} type="submit">{value.button}</button>
+                    <button className={btnStyle ? styles.activeBtn : ''} type="submit">{value.button}</button>
                   </form>
               }
             </div>
