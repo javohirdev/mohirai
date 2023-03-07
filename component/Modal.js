@@ -3,9 +3,7 @@ import styles from "../styles/Modal.module.css";
 import PartnersApi from "../pages/mockDatas/partnersapi/static.json";
 import { useRouter } from "next/router";
 import Input from "react-phone-number-input/input";
-import ReCAPTCHA from "react-google-recaptcha";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function Modal({ setModal }) {
 
@@ -101,8 +99,6 @@ export default function Modal({ setModal }) {
                     </div>
 
                     <div>
-                      <ReCAPTCHA sitekey={`6LdNod0kAAAAAK232SzA4L9AftUhMM0SnFccF_a2`} onChange={handleTokenChange} />
-
                       <HCaptcha
                         sitekey={`9a098deb-3095-4202-97c0-347d8a1b43e2`}
                       />
