@@ -111,7 +111,7 @@ export default function Modal({ setModal }) {
 
                     <div>
                       <HCaptcha
-                        sitekey={`${process.env.REACT_APP_SITE_KEY}`}
+                        sitekey={`9a098deb-3095-4202-97c0-347d8a1b43e2`}
                         onVerify={handleHCaptchaVerify}
                       />
                       {isHCaptchaChecked() ? (
