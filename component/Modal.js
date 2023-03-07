@@ -36,7 +36,7 @@ export default function Modal({ setModal }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name !== "" && number !== '' && !isHCaptchaChecked()) {
+    if (name !== "" && number !== '' && isHCaptchaChecked()) {
 
       fetch("https://admin.uzbekvoice.ai/items/waitlist_form", {
         method: "POST",
@@ -121,7 +121,7 @@ export default function Modal({ setModal }) {
                       )}
                     </div>
 
-                    <button className={btnStyle ? styles.activeBtn : ''} disabled={!isHCaptchaChecked()} type="submit">{value.button}</button>
+                    <button className={btnStyle ? styles.activeBtn : ''} disabled={isHCaptchaChecked()} type="submit">{value.button}</button>
                   </form>
               }
             </div>
