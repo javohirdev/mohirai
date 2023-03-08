@@ -34,7 +34,9 @@ a {
   padding: 0;
 }
 
-
+.form-control{
+  width: 100%;
+}
 
 .item.active {
   color: #8d53fd;

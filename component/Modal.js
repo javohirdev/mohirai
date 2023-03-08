@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../styles/Modal.module.css";
 import PartnersApi from "../pages/mockDatas/partnersapi/static.json";
 import { useRouter } from "next/router";
-import Input from "react-phone-number-input/input";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import PhoneInput from "react-phone-input-2";
 
 export default function Modal({ setModal }) {
 
@@ -12,24 +12,24 @@ export default function Modal({ setModal }) {
   const [number, setNumber] = useState('');
   const [btnStyle, setBtnStyle] = useState(null);
   const [isSend, setIsSend] = useState(false);
+  const [hCaptchaResponse, setHCaptchaResponse] = useState('');
 
   const { locale } = useRouter();
 
   const buttonStyle = () => {
     if (name !== '') {
       setBtnStyle(true)
-    } else {
+    }
+    else { 
       setBtnStyle(false)
     }
   }
 
-  const [hCaptchaResponse, setHCaptchaResponse] = useState('');
-
-  function handleHCaptchaVerify(responseToken) {
+  const handleHCaptchaVerify = (responseToken) => {
     setHCaptchaResponse(responseToken);
   }
 
-  function isHCaptchaChecked() {
+  const isHCaptchaChecked = () => {
     return hCaptchaResponse !== '';
   }
 
@@ -60,15 +60,8 @@ export default function Modal({ setModal }) {
       setTimeout(() => {
         setModal(false)
       }, 4000);
-
-      // if (!isHCaptchaChecked()) {
-      //   alert('Please complete the hCaptcha challenge.');
-      //   setBtnStyle(false)
-      //   return;
-      // }
     }
   };
-
 
   return (
     PartnersApi.waitless
@@ -89,20 +82,31 @@ export default function Modal({ setModal }) {
                 isSend ? <span className={styles.thanksMessage}>{value.thanks}</span> :
                   <form onSubmit={handleSubmit} className={styles.body}>
                     <label htmlFor="name">{value.label_name}</label>
-                    <input onChange={(e) => setName(e.target.value)} type={'text'} id="name" placeholder={value.placeholder_name} />
-
+                    <input
+                      onChange={(e) => {
+                        setName(e.target.value);
+                        buttonStyle();
+                      }}
+                      type={'text'}
+                      id="name"
+                      placeholder={value.placeholder_name}
+                    />
                     <label htmlFor="number">{value.label_comment}</label>
-                    <Input
+                    <PhoneInput
                       id="number"
-                      international
-                      country="UZ"
-                      defaultCountry="UZ"
-                      withCountryCallingCode
-                      maxLength="17"
+                      specialLabel=""
+                      country={'uz'}
+                      countryCodeEditable={false}
                       value={number}
                       required
-                      onChange={setNumber}
+                      onChange={(number) => {
+                        setNumber(number);
+                        buttonStyle();
+                      }}
                       onKeyUp={buttonStyle}
+                      enableAreaCodes={true}
+                      placeholder="+998"
+                      className={styles.input}
                     />
                     <div className={styles.checkbox}>
                       <input onChange={(e) => setChecked(e.target.checked)} type={'checkbox'} />
@@ -115,9 +119,9 @@ export default function Modal({ setModal }) {
                         onVerify={handleHCaptchaVerify}
                       />
                       {isHCaptchaChecked() ? (
-                        <div>Captcha checked!</div>
+                        <></>
                       ) : (
-                        <div>Captcha not checked yet.</div>
+                        <div>Captcha tekshirilmadi!</div>
                       )}
                     </div>
 
