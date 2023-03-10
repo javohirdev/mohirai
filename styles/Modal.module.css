@@ -90,8 +90,8 @@
 .checkbox {
     display: flex;
     align-items: center;
-    margin-bottom: 60px;
-    margin-top: 12px;
+    margin-bottom: 15px;
+    margin-top: 0;
 }
 
 .checkbox input {
@@ -106,6 +106,14 @@
     line-height: 24px;
     color: #FFFFFF;
     margin-left: 10px;
+}
+.captcha{
+    margin: 10px 0 25px;
+}
+.captcha p{
+    color: #ee2727;
+    font-family: system-ui;
+    font-weight: 600;
 }
 
 .body button {

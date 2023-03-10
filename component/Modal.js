@@ -113,16 +113,12 @@ export default function Modal({ setModal }) {
                       <span>{value.descr}</span>
                     </div>
 
-                    <div>
+                    <div className={styles.captcha}>
                       <HCaptcha
                         sitekey={`9a098deb-3095-4202-97c0-347d8a1b43e2`}
                         onVerify={handleHCaptchaVerify}
                       />
-                      {isHCaptchaChecked() ? (
-                        <></>
-                      ) : (
-                        <div>Captcha tekshirilmadi!</div>
-                      )}
+                      {isHCaptchaChecked() ? (<></>) : (<p>Captcha tekshirilmadi!</p>)}
                     </div>
 
                     <button className={btnStyle ? styles.activeBtn : ''} type="submit">{value.button}</button>

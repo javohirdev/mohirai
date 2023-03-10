@@ -151,7 +151,6 @@ export default function HeroIndex({ data }) {
           <div className={styles.content}>
             <h1>{value?.title}</h1>
             <p>{value?.subtitle}</p>
-
             <div className={styles.waitlist}>
               <button type="button" onClick={openModal}>
                 {value?.call_action_button}
@@ -162,7 +161,7 @@ export default function HeroIndex({ data }) {
           {chatToggle ? (
             <div className={styles.mic + " " + styles.chat}>
               <img className={styles.wave} src="/wave.gif" alt="mic" />
-              <div>
+              <div className={styles.wrapperMain}>
                 <div className={styles.warpperChat}>
                   {finalConversation.map((item, index) => {
                     return (
@@ -248,6 +247,10 @@ export default function HeroIndex({ data }) {
                   />
                 </div>
                 <span className={styles.textInfo}>{value?.try_me_text}</span>
+                <div className={styles.micAnimation}>
+                  <div class={styles.waves}></div>
+                  <div class={styles.waves}></div>
+                </div>
               </div>
             </div>
           )}
