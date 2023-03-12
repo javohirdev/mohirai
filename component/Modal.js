@@ -39,7 +39,7 @@ export default function Modal({ setModal }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name !== "" && number !== '' && isHCaptchaChecked()) {
+    if (name !== "" && isValidUzbekistanNumber !== '' && isHCaptchaChecked()) {
 
       fetch("https://admin.uzbekvoice.ai/items/waitlist_form", {
         method: "POST",
@@ -48,7 +48,7 @@ export default function Modal({ setModal }) {
         },
         body: JSON.stringify({
           name,
-          email: number,
+          email: isValidUzbekistanNumber,
           subscribe_checkbox: checked
         }),
       }).then(function (response) {
@@ -104,14 +104,12 @@ export default function Modal({ setModal }) {
                       countryCodeEditable={false}
                       value={number}
                       required
-                      onChange={(number) => {
-                        setNumber(number);
-                        buttonStyle();
-                      }}
+                      onChange={(value) => { setNumber(value) }}
                       onKeyUp={buttonStyle}
                       enableAreaCodes={true}
                       placeholder="+998"
                       className={styles.input}
+                      pattern="[0-9]{9,15}"
                     />
                     <div className={styles.checkbox}>
                       <input onChange={(e) => setChecked(e.target.checked)} type={'checkbox'} />
