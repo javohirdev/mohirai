@@ -14,7 +14,7 @@ export default function Modal({ setModal }) {
   const [isSend, setIsSend] = useState(false);
   const [hCaptchaResponse, setHCaptchaResponse] = useState('');
   const uzbekistanOperators = ['90', '91', '93', '94', '95', '97', '98', '99'];
-  const firstTwoDigits = number.slice(0, 2);
+  const firstTwoDigits = number ? number.slice(0, 2) : '';
   const isValidUzbekistanNumber = uzbekistanOperators.includes(firstTwoDigits);
 
   const { locale } = useRouter();
@@ -39,7 +39,7 @@ export default function Modal({ setModal }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name !== "" && isValidUzbekistanNumber !== '' && isHCaptchaChecked()) {
+    if (name !== "" && number !== '' && isHCaptchaChecked()) {
 
       fetch("https://admin.uzbekvoice.ai/items/waitlist_form", {
         method: "POST",
@@ -48,7 +48,7 @@ export default function Modal({ setModal }) {
         },
         body: JSON.stringify({
           name,
-          email: isValidUzbekistanNumber,
+          email: number,
           subscribe_checkbox: checked
         }),
       }).then(function (response) {
@@ -104,7 +104,7 @@ export default function Modal({ setModal }) {
                       countryCodeEditable={false}
                       value={number}
                       required
-                      onChange={(value) => { setNumber(value) }}
+                      onChange={setNumber}
                       onKeyUp={buttonStyle}
                       enableAreaCodes={true}
                       placeholder="+998"
