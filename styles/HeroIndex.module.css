@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
 .container {
   position: relative;
   max-width: 1400px;
@@ -305,6 +307,62 @@
   left: -10010px;
 }
 
+.banner{
+  width: 600px;
+  height: 400px;
+  background-color: #130a1e87;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.bannerMain{
+  margin: 70px auto;
+}
+.bannerMain .closeButton{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  border-radius: 50%;
+  padding: 10px 13px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+}
+
+.bannerMain .bannerContent{
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 20px 0;
+  padding: 0 50px;
+}
+.bannerContent a{
+  color: #44b2ff;
+  font-weight: 700;
+}
+.bannerButton{
+  margin: 40px 0;
+  position: relative;
+}
+.bannerButton img{
+  position: absolute;
+  right: 115px;
+  bottom: -10px;
+}
+
+.bannerButton a{
+  background: linear-gradient(91.88deg, #00C7FE 1.59%, #007BF4 89.03%);
+  padding: 15px 100px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 18px;
+}
 
 .recordAudio {
   display: flex;
@@ -472,6 +530,19 @@
     max-width: 60%;
     min-width: 22%;
   }
+  .banner{
+    height: 500px;
+  }
+  .bannerMain{
+    margin: 90px auto;
+  }
+  .bannerMain .bannerContent{
+    padding: 0 20px;
+  }
+  .bannerButton img{
+    right: 150px;
+    bottom: -10px;
+  }
 }
 
 @media (max-width: 850px) {
@@ -488,6 +559,27 @@
 
   .hero_blur {
     display: none;
+  }
+
+  .banner{
+    width: 550px;
+    height: 400px;
+    top: 70px;
+  }
+  .bannerMain{
+    margin: 70px auto;
+  }
+  .bannerMain .bannerContent{
+    font-size: 17px;
+    padding: 0;
+  }
+  .bannerButton a{
+    padding: 15px 70px;
+    font-size: 17px;
+  }
+  .bannerButton img{
+    right: 125px;
+    bottom: -10px;
   }
 }
 
@@ -539,6 +631,38 @@
   .mic .ellips {
     width: 90px;
     transform: translate(-50%, -40%);
+  }
+
+  .micAnimation{
+    width: 420px;
+    height: 420px;
+    left: 50%;
+    top: 60%;
+  }
+  .waves{
+    width: 800px;
+    height: 800px;
+    top: -15%;
+    left: 75%;
+  }
+  .banner{
+    width: 450px;
+    height: 400px;
+    top: 70px;
+  }
+  .bannerMain{
+    margin: 70px auto;
+  }
+  .bannerMain .bannerContent{
+    font-size: 17px;
+    padding: 0;
+  }
+  .bannerButton a{
+    padding: 15px 40px;
+    font-size: 17px;
+  }
+  .bannerButton img{
+    display: none;
   }
 }
 
@@ -601,6 +725,39 @@
   .waitlist a {
     margin-top: 20px;
   }
+
+  .micAnimation{
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 60%;
+  }
+  .waves{
+    width: 800px;
+    height: 800px;
+    top: -15%;
+    left: 75%;
+  }
+
+  .banner{
+    width: 400px;
+    height: 400px;
+    top: 35px;
+  }
+  .bannerMain{
+    margin: 50px auto;
+  }
+  .bannerMain .bannerContent{
+    font-size: 17px;
+    padding: 0;
+  }
+  .bannerButton a{
+    padding: 15px 40px;
+    font-size: 17px;
+  }
+  .bannerButton img{
+    display: none;
+  }
 }
 
 
@@ -618,6 +775,39 @@
   .realRecordingImage {
     width: 70px;
     height: 70px;
+  }
+
+  .micAnimation{
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 60%;
+  }
+  .waves{
+    width: 800px;
+    height: 800px;
+    top: -15%;
+    left: 75%;
+  }
+
+  .banner{
+    width: 400px;
+    height: 400px;
+    top: 35px;
+  }
+  .bannerMain{
+    margin: 50px auto;
+  }
+  .bannerMain .bannerContent{
+    font-size: 17px;
+    padding: 0;
+  }
+  .bannerButton a{
+    padding: 15px 40px;
+    font-size: 17px;
+  }
+  .bannerButton img{
+    display: none;
   }
 }
 
@@ -659,6 +849,38 @@
   .chat .wave {
     left: 20px;
   }
+  .micAnimation{
+    width: 375px;
+    height: 375px;
+    left: 50%;
+    top: 60%;
+  }
+  .waves{
+    width: 800px;
+    height: 800px;
+    top: -15%;
+    left: 75%;
+  }
+
+  .banner{
+    width: 370px;
+    height: 400px;
+    top: 10px;
+  }
+  .bannerMain{
+    margin: 50px auto;
+  }
+  .bannerMain .bannerContent{
+    font-size: 17px;
+    padding: 0;
+  }
+  .bannerButton a{
+    padding: 15px 40px;
+    font-size: 17px;
+  }
+  .bannerButton img{
+    display: none;
+  }
 }
 
 @media (max-width: 390px) {
@@ -666,6 +888,38 @@
   .mic {
     width: 330px;
     height: 330px;
+  }
+  .micAnimation{
+    width: 345px;
+    height: 345px;
+    left: 50%;
+    top: 60%;
+  }
+  .waves{
+    width: 800px;
+    height: 800px;
+    top: -15%;
+    left: 75%;
+  }
+
+  .banner{
+    width: 300px;
+    height: 400px;
+    top: -15px;
+  }
+  .bannerMain{
+    margin: 50px auto;
+  }
+  .bannerMain .bannerContent{
+    font-size: 17px;
+    padding: 0;
+  }
+  .bannerButton a{
+    padding: 15px 40px;
+    font-size: 17px;
+  }
+  .bannerButton img{
+    display: none;
   }
 
 }
@@ -677,5 +931,35 @@
     width: 310px;
     height: 310px;
   }
-
+  .micAnimation{
+    width: 345px;
+    height: 345px;
+    left: 50%;
+    top: 60%;
+  }
+  .waves{
+    width: 800px;
+    height: 800px;
+    top: -15%;
+    left: 75%;
+  }
+  .banner{
+    width: 300px;
+    height: 400px;
+    top: -15px;
+  }
+  .bannerMain{
+    margin: 50px auto;
+  }
+  .bannerMain .bannerContent{
+    font-size: 17px;
+    padding: 0;
+  }
+  .bannerButton a{
+    padding: 15px 40px;
+    font-size: 17px;
+  }
+  .bannerButton img{
+    display: none;
+  }
 }

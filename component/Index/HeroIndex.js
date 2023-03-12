@@ -13,6 +13,7 @@ import {
   tts,
 } from "../../utils/api";
 import { useAudioRecorder } from "../../utils/use-audio-recorder";
+import Link from "next/link";
 
 // show 3 gray  dots when the message is loading
 function AnimatedTypingIndicator() {
@@ -22,7 +23,10 @@ function AnimatedTypingIndicator() {
 export default function HeroIndex({ data }) {
   const { locale } = useRouter();
   const [modal, setModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const [chatToggle, setChatToggle] = useState(false);
+
+  const handleCloseModal = () => { setShowModal(false); };
 
   const openModal = (e) => {
     setModal(true);
@@ -41,11 +45,11 @@ export default function HeroIndex({ data }) {
     ...conversation,
     ...(answering
       ? [
-          {
-            text: <AnimatedTypingIndicator />,
-            author: "AI",
-          },
-        ]
+        {
+          text: <AnimatedTypingIndicator />,
+          author: "AI",
+        },
+      ]
       : []),
     // ...(recorderControls.isRecording
     //   ? [
@@ -57,11 +61,11 @@ export default function HeroIndex({ data }) {
     //   : []),
     ...(transcribing
       ? [
-          {
-            text: <AnimatedTypingIndicator />,
-            author: "Human",
-          },
-        ]
+        {
+          text: <AnimatedTypingIndicator />,
+          author: "Human",
+        },
+      ]
       : []),
   ].reverse();
 
@@ -250,6 +254,26 @@ export default function HeroIndex({ data }) {
                 <div className={styles.micAnimation}>
                   <div class={styles.waves}></div>
                   <div class={styles.waves}></div>
+                </div>
+                <div className={styles.banner} style={{ display: showModal ? 'block' : 'none' }}>
+                  <div className={styles.bannerMain}>
+                  <button className={styles.closeButton} onClick={handleCloseModal}>
+                    X
+                  </button>
+                  <img src="/mohirai.svg" className={styles.bannerLogo} alt="mohirdev" />
+
+                    <p className={styles.bannerContent}>
+                      Ayni damda foydalanuvchilar koʻpligi uchun
+                      keyinroq urinib koʻring,
+                      yoki <Link href="www.t.me/@javohircode" className={styles.mohirLink}><a>Mohir AI</a></Link> telegram botiga oʻting
+                    </p>
+                    <div className={styles.bannerButton}>
+                      <Link href="t.me/@javohircode">
+                        <a>Telegram botga o'tish</a>
+                      </Link>
+                      <img src="/telegram.png" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
