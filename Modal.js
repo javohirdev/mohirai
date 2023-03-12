@@ -39,7 +39,7 @@ export default function Modal({ setModal }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name !== "" && number !== '' && isHCaptchaChecked()) {
+    if (name !== "" && isValidUzbekistanNumber !== '' && isHCaptchaChecked()) {
 
       fetch("https://admin.uzbekvoice.ai/items/waitlist_form", {
         method: "POST",
