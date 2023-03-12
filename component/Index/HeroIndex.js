@@ -265,10 +265,10 @@ export default function HeroIndex({ data }) {
                     <p className={styles.bannerContent}>
                       Ayni damda foydalanuvchilar koʻpligi uchun
                       keyinroq urinib koʻring,
-                      yoki <Link href="www.t.me/@javohircode" className={styles.mohirLink}><a>Mohir AI</a></Link> telegram botiga oʻting
+                      yoki <Link href="https://t.me/MohirAIChatBot" target="_blank" className={styles.mohirLink}><a>Mohir AI</a></Link> telegram botiga oʻting
                     </p>
                     <div className={styles.bannerButton}>
-                      <Link href="t.me/@javohircode">
+                      <Link href="https://t.me/MohirAIChatBot" target="_blank">
                         <a>Telegram botga o'tish</a>
                       </Link>
                       <img src="/telegram.png" />
