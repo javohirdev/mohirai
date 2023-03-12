@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styles from "../styles/ModalPartners.module.css";
 import PartnersApi from "../pages/mockDatas/partnersapi/static.json";
 import { useRouter } from "next/router";
-import Input from "react-phone-number-input/input";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import PhoneInput from "react-phone-input-2";
 
 export default function ModalPartners({ setOpenPartnersModal }) {
 
@@ -11,6 +12,7 @@ export default function ModalPartners({ setOpenPartnersModal }) {
   const [comment, setComment] = useState("");
   const [btnStyle, setBtnStyle] = useState(null);
   const [isSend, setIsSend] = useState(false);
+  const [hCaptchaResponse, setHCaptchaResponse] = useState('');
 
   const { locale } = useRouter();
 
@@ -25,10 +27,18 @@ export default function ModalPartners({ setOpenPartnersModal }) {
   const token = "5898057424:AAHPSH1xom0rFNHCHYN_9MgVJzdizDctelA";
   const chad_id = -1001865248088;
 
+  const handleHCaptchaVerify = (responseToken) => {
+    setHCaptchaResponse(responseToken);
+  }
+
+  const isHCaptchaChecked = () => {
+    return hCaptchaResponse !== '';
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name !== "" && number !== '') {
+    if (name !== "" && number !== '' && isHCaptchaChecked()) {
 
       fetch("https://api.telegram.org/bot" + token + "/sendMessage", {
         async: true,
@@ -87,17 +97,21 @@ export default function ModalPartners({ setOpenPartnersModal }) {
                     <input onChange={(e) => setName(e.target.value)} type={'text'} id="name" placeholder={value.placeholder_name} />
 
                     <label htmlFor="number">{value.label_phone}</label>
-                    <Input
+                    <PhoneInput
                       id="number"
-                      international
-                      country="UZ"
-                      defaultCountry="UZ"
-                      withCountryCallingCode
-                      maxLength="17"
+                      specialLabel=""
+                      country={'uz'}
+                      countryCodeEditable={false}
                       value={number}
                       required
-                      onChange={setNumber}
+                      onChange={(number) => {
+                        setNumber(number);
+                        buttonStyle();
+                      }}
                       onKeyUp={buttonStyle}
+                      enableAreaCodes={true}
+                      placeholder="+998"
+                      className={styles.input}
                     />
 
                     <label>{value.label_comment}</label>
@@ -109,6 +123,14 @@ export default function ModalPartners({ setOpenPartnersModal }) {
                       cols="50"
                       placeholder={value.placeholder_comment}
                     ></textarea>
+
+                    <div className={styles.captcha}>
+                      <HCaptcha
+                        sitekey={`9a098deb-3095-4202-97c0-347d8a1b43e2`}
+                        onVerify={handleHCaptchaVerify}
+                      />
+                      {isHCaptchaChecked() ? (<></>) : (<p>Captcha tekshirilmadi!</p>)}
+                    </div>
 
                     <button className={btnStyle ? styles.activeBtn : ''} type="submit">{value.button}</button>
                   </form>

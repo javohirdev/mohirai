@@ -13,6 +13,9 @@ export default function Modal({ setModal }) {
   const [btnStyle, setBtnStyle] = useState(null);
   const [isSend, setIsSend] = useState(false);
   const [hCaptchaResponse, setHCaptchaResponse] = useState('');
+  const uzbekistanOperators = ['90', '91', '93', '94', '95', '97', '98', '99'];
+  const firstTwoDigits = number.slice(0, 2);
+  const isValidUzbekistanNumber = uzbekistanOperators.includes(firstTwoDigits);
 
   const { locale } = useRouter();
 
@@ -61,6 +64,8 @@ export default function Modal({ setModal }) {
         setModal(false)
       }, 4000);
     }
+
+    console.log(`Submitting phone number: ${number}`);
   };
 
   return (
@@ -121,7 +126,7 @@ export default function Modal({ setModal }) {
                       {isHCaptchaChecked() ? (<></>) : (<p>Captcha tekshirilmadi!</p>)}
                     </div>
 
-                    <button className={btnStyle ? styles.activeBtn : ''} type="submit">{value.button}</button>
+                    <button className={btnStyle ? styles.activeBtn : ''} disabled={!isValidUzbekistanNumber} type="submit">{value.button}</button>
                   </form>
               }
             </div>
