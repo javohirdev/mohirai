@@ -27,8 +27,10 @@
     "react": "18.1.0",
     "react-audio-voice-recorder": "^1.0.4",
     "react-dom": "18.1.0",
+    "react-notifications-component": "^4.0.1",
     "react-phone-input-2": "^2.15.1",
     "react-phone-number-input": "^3.2.19",
+    "react-toastify": "^9.1.1",
     "swiper": "^8.3.2"
   },
   "devDependencies": {
