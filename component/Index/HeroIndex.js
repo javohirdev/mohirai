@@ -14,7 +14,7 @@ import {
 } from "../../utils/api";
 import { useAudioRecorder } from "../../utils/use-audio-recorder";
 import Link from "next/link";
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // show 3 gray  dots when the message is loading
@@ -153,13 +153,13 @@ export default function HeroIndex({ data }) {
       `
         Ushbu xizmatdan foydalanish orqali siz ovozli ma'lumotlaringizni yig'ish va qayta ishlashga rozilik bildirasiz,
         Agar siz bunga rozi bo'lmasangiz iltimos, ushbu xizmatdan foydalanishdan saqlaning!!
-      `
-    )};
+      `)};
 
   return data.data
     .filter((p) => p.languages_code === locale)
     .map((value, i) => (
       <div key={i} className={styles.container} onClick={() => setModal(false)}>
+        <ToastContainer limit={1} autoClose={8000}/>
         <div className={styles.block}>
           <div className={styles.hero_blur}></div>
           <div className={styles.content}>
@@ -263,8 +263,8 @@ export default function HeroIndex({ data }) {
                 </div>
                 <span className={styles.textInfo}>{value?.try_me_text}</span>
                 <div className={styles.micAnimation}>
-                  <div class={styles.waves}></div>
-                  <div class={styles.waves}></div>
+                  <div className={styles.waves}></div>
+                  <div className={styles.waves}></div>
                 </div>
                 <div className={styles.banner} style={{ display: showModal ? 'block' : 'none' }}>
                   <div className={styles.bannerMain}>
