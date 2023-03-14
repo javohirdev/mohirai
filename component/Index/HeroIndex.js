@@ -150,11 +150,9 @@ export default function HeroIndex({ data }) {
 
   const notify = () => {
     toast.warning(
-      `
-        Ushbu xizmatdan foydalanish orqali siz ovozli ma'lumotlaringizni yig'ish va qayta ishlashga rozilik bildirasiz,
-        Agar siz bunga rozi bo'lmasangiz iltimos, ushbu xizmatdan foydalanishdan saqlaning!!
-      `
-    )};
+      'Ushbu xizmatdan foydalanish orqali siz ovozli malumotlaringizni yigish va qayta ishlashga rozilik bildirasiz, Agar siz bunga rozi bolmasangiz iltimos ushbu xizmatdan foydalanishdan saqlaning!!'
+    )
+  };
 
   return data.data
     .filter((p) => p.languages_code === locale)
