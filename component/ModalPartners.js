@@ -4,9 +4,9 @@ import PartnersApi from "../pages/mockDatas/partnersapi/static.json";
 import { useRouter } from "next/router";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import PhoneInput from "react-phone-input-2";
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 // Load the environment variables from the .env file
-dotenv.config();
+// dotenv.config();
 
 export default function ModalPartners({ setOpenPartnersModal }) {
 
