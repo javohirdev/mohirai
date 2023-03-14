@@ -27,8 +27,8 @@ export default function ModalPartners({ setOpenPartnersModal }) {
     }
   }
 
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chad_id = process.env.TELEGRAM_CHAT_ID;
+  const token = "5898057424:AAHPSH1xom0rFNHCHYN_9MgVJzdizDctelA";
+  const chad_id = -1001942371012;
 
   const handleHCaptchaVerify = (responseToken) => {
     setHCaptchaResponse(responseToken);
