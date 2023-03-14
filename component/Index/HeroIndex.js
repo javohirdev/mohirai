@@ -148,14 +148,13 @@ export default function HeroIndex({ data }) {
     );
   };
 
-  useEffect(() => {
+  const notify = () => {
     toast.warning(
       `
-      Ushbu xizmatdan foydalanish orqali siz ovozli ma'lumotlaringizni yig'ish va qayta ishlashga rozilik bildirasiz,
-      Agar siz bunga rozi bo'lmasangiz, iltimos, ushbu xizmatdan foydalanishdan saqlaning!
+        Ushbu xizmatdan foydalanish orqali siz ovozli ma'lumotlaringizni yig'ish va qayta ishlashga rozilik bildirasiz,
+        Agar siz bunga rozi bo'lmasangiz iltimos, ushbu xizmatdan foydalanishdan saqlaning!!
       `
-    );
-  }, []);
+    )};
 
   return data.data
     .filter((p) => p.languages_code === locale)
@@ -236,6 +235,7 @@ export default function HeroIndex({ data }) {
                   className={styles.micPicture}
                   onClick={() => {
                     setChatToggle(true);
+                    notify();
                     (async () => {
                       const ttsAudio = await tts(
                         "Salom! men o`zbek tilidagi ilk sun`iy intellektman. Sizga qanday yordam bera olaman"

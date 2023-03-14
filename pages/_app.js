@@ -1,5 +1,6 @@
 import Layout from "../component/Layout";
 import Head from "next/head";
+import Script from "next/script";
 import "../styles/globals.css";
 import NextNProgress from "nextjs-progressbar";
 import { useRouter } from "next/router";
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }) {
             name="google-site-verification"
             content="bFnjq-PIuIrpOIHmhgutTVLrhdHsCZTam66nqRCiE0k"
           />
+          <meta name="google-site-verification" content="l1WPZdHSgUu4gUQaa0TesmgPmSGolDjEGpqven46Pt8" />
           <link rel="icon" href="/dark.svg" />
         </Head>
 
@@ -38,6 +40,9 @@ function MyApp({ Component, pageProps }) {
           ))}
         <Gtag />
         <Component {...pageProps} />
+        <noscript><img height="1" width="1" style="display:none"
+          src="https://www.facebook.com/tr?id=734735484849614&ev=PageView&noscript=1"
+        /></noscript>
       </Layout>
     </div>
   );

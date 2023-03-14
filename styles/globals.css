@@ -41,6 +41,11 @@ a {
   display: none;
 }
 
+.Toastify__toast-body div{
+  line-height: 21px;
+  font-size: 15px;
+}
+
 .form-control{
   width: 100%;
 }
