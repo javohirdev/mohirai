@@ -4,6 +4,9 @@ import PartnersApi from "../pages/mockDatas/partnersapi/static.json";
 import { useRouter } from "next/router";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import PhoneInput from "react-phone-input-2";
+import dotenv from 'dotenv';
+// Load the environment variables from the .env file
+dotenv.config();
 
 export default function ModalPartners({ setOpenPartnersModal }) {
 
@@ -24,8 +27,8 @@ export default function ModalPartners({ setOpenPartnersModal }) {
     }
   }
 
-  const token = "5898057424:AAHPSH1xom0rFNHCHYN_9MgVJzdizDctelA";
-  const chad_id = -1001942371012;
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chad_id = process.env.TELEGRAM_CHAT_ID;
 
   const handleHCaptchaVerify = (responseToken) => {
     setHCaptchaResponse(responseToken);
