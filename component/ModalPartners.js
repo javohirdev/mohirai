@@ -41,7 +41,7 @@ export default function ModalPartners({ setOpenPartnersModal }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name !== "" && number !== '' && isHCaptchaChecked()) {
+    if (name !== "" && number !== '' && comment !== "" && isHCaptchaChecked()) {
 
       fetch("https://api.telegram.org/bot" + token + "/sendMessage", {
         async: true,
@@ -57,7 +57,7 @@ export default function ModalPartners({ setOpenPartnersModal }) {
           text:
             "Ism: " +
             name +
-            "\nTelefon raqam: " +
+            "\nTelefon raqam: +" +
             number +
             "\nIzoh: " +
             comment,
@@ -125,6 +125,7 @@ export default function ModalPartners({ setOpenPartnersModal }) {
                       rows="4"
                       cols="50"
                       placeholder={value.placeholder_comment}
+                      required
                     ></textarea>
 
                     <div className={styles.captcha}>
